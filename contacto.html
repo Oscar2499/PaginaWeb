@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/Pizza.png">
+  <script src="https://kit.fontawesome.com/b235592400.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Mi navegador -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- Texto Animado -->
+    <main>
+      <a href="#" class="logotipo" id="logotipo">
+        <div class="texto-animado" id="logo">Oscar</div>
+        <p class="subtitulo">Pizza</p>
+      </a>
+    </main>
+    <!-- Boton para desplegar en moviles -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navegador desplegado en pantallas de computadora -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fotos.html">Fotos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="experiencias.html">Experiencias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Recordar agregar siempre el action (relacionado al archivo .php que tiene el codigo para enviar correo) y method POST -->
+  <form action="enviar.php" method="POST">
+    <div class="container">
+      <!-- Primer fila para nombre y apellidos -->
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Ingresa tu nombre</label>
+          <!-- Input Nombre / name=nombre, se usara dentro de archivo PHP -->
+          <input type="text" class="form-control" placeholder="First name" name="nombre" required>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Ingresa tus apellidos</label>
+          <!-- Input apellidos / name=apellidos, se usara dentro de archivo PHP -->
+          <input type="text" class="form-control" placeholder="Last name" name="apellidos" required>
+        </div>
+      </div>
+
+      <!-- Segunda fila para telefono y correo / name=telefono, se usara dentro de archivo PHP -->
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Telefono</label>
+          <!-- Input Telefono -->
+          <input type="text" class="form-control" placeholder="Telefono o Celular" name="telefono" required>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Correo</label>
+          <!-- Input Correo / name=correo, se usara dentro de archivo PHP -->
+          <input type="email" class="form-control" placeholder="Correo@ejemplo.com" name="correo" required>
+        </div>
+      </div>
+
+      <!-- Fila para caja de mensaje -->
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <label>Mensaje</label>
+          <!-- Textarea para el area de texto / name=mensaje, se usara dentro de archivo PHP -->
+          <textarea class="form-control" rows="5" name="mensaje" required></textarea>
+        </div>
+      </div>
+
+      <!-- Boton que realiza la accion de enviar la informacion del formulario, debe ser type=submit -->
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <button type="submit" class="btn btn-primary" id="boton">Enviar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </form>
+
+  <!-- footer -->
+  <footer>
+    <div class="container__footer">
+      <div class="box__footer">
+        <div class="logo">
+          <img src="img/Pizza.png" alt="">
+        </div>
+        <div class="terms">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio dolore minus a culpa nemo excepturi rerum
+            nulla quidem iusto, architecto fugiat. Ad sapiente neque earum quia nam reiciendis voluptatem atque.</p>
+        </div>
+      </div>
+      <div class="box__footer">
+        <h2>Contacto</h2>
+        <a href="#">Ubicacion</a>
+        <a href="#">#********</a>
+      </div>
+      <div class="box__footer">
+        <h2>Compañia</h2>
+        <a href="#">Acerca de</a>
+        <a href="#">Trabajos</a>
+        <a href="#">Procesos</a>
+        <a href="#">Servicios</a>
+      </div>
+      <div class="box__footer">
+        <h2>Redes Sociales</h2>
+        <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="#"><i class="fab fa-instagram-square"></i></i> Instagram</a>
+      </div>
+    </div>
+    <div class="box__copyright">
+      <hr>
+      <p>Todos los derechos reservados © 2021
+        <b>Oscar Esparza</b>
+      </p>
+    </div>
+  </footer>
+
+  <!-- boton hacia arriba -->
+  <div id="button-up">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- jQuery (Bootstrap) JavaScript plugins -->
+  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/p.js"></script>
+</body>
+
+</html>
